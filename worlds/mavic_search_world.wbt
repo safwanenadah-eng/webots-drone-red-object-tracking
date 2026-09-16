@@ -1,0 +1,297 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SandyGround.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/Windmill.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/SmallManor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/manhole/protos/SquareManhole.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/tesla/TeslaModel3Simple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Pine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/trees/protos/Forest.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/dji/mavic/protos/Mavic2Pro.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/animals/protos/Cat.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/animals/protos/Dog.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/toyota/ToyotaPrius.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/ComposedHouse.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/garden/protos/DogHouse.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/traffic/protos/ControlledStreetLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/street_furniture/protos/Bench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/HouseWithGarage.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/shapes/protos/TexturedBoxShape.proto"
+
+WorldInfo {
+  info [
+    "This demonstration shows a DJI Mavic 2 PRO flying over a rural area."
+    "After the drone has taken off, you can control it with the keyboard of your computer."
+  ]
+  title "DJI Mavic 2 PRO demo"
+  basicTimeStep 8
+  defaultDamping Damping {
+    linear 0.5
+    angular 0.5
+  }
+}
+Viewpoint {
+  orientation -0.04857402418505025 -0.8942642575458754 0.4448954954260542 6.04020775640057
+  position 5.330399654702783 -57.34894023078413 2.056105739083744
+  near 0.2
+  follow "Mavic 2 PRO"
+  followSmoothness 0.2
+}
+TexturedBackground {
+  luminosity 3
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 400 400
+  tileSize 6 6
+  appearance SandyGround {
+  }
+}
+ControlledStreetLight {
+  translation 32.83 -10.05 0.2
+  rotation 0 0 1 1.5708
+  name "street light(7)"
+}
+Road {
+  translation -43.8 9.2 0.01
+  rotation 0 0 1 -0.3926996938995747
+  width 5
+  numberOfLanes 1
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    100 0 0
+    200 200 0
+  ]
+  splineSubdivision 8
+  appearance Pavement {
+    type "black stone"
+  }
+}
+Windmill {
+  translation -43.8656 -19.8433 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+}
+Windmill {
+  translation -44.258 -27.3356 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(1)"
+}
+Windmill {
+  translation -46.2448 30.573 0
+  rotation -7.19228e-09 2.6842e-08 1 0.523601
+  name "windmill(2)"
+}
+Windmill {
+  translation -38.75 23.4 0
+  name "windmill(3)"
+}
+SmallManor {
+  translation -50.35 11.25 0
+  rotation 0 0 -1 0.392394
+}
+SquareManhole {
+  translation 7.1 -58.07 -0.03
+}
+CardboardBox {
+  translation -0.730157 -1.22891 0.3
+  rotation 0 0 1 -1.8325953071795862
+}
+TeslaModel3Simple {
+  translation 21.7705 -60.3835 0.31
+  rotation 0 0 1 1.30899
+}
+Pine {
+  translation -14.0083 -14.4828 0
+  rotation 0 0 1 2.61799
+}
+Pine {
+  translation -19.6195 -24.3783 0
+  rotation 0 0 1 2.87979
+  name "pine tree(1)"
+}
+Pine {
+  translation -22.0129 6.20205 0
+  name "pine tree(3)"
+}
+Pine {
+  translation -10.6926 -25.1339 0
+  name "pine tree(4)"
+}
+Pine {
+  translation -14.3441 14.5621 0
+  name "pine tree(5)"
+}
+Pine {
+  translation -26.6328 -7.1707 0
+  name "pine tree(6)"
+}
+Pine {
+  translation -9.37029 14.0209 0
+  rotation 0 0 1 -2.6179953071795863
+  name "pine tree(2)"
+}
+Forest {
+  translation 0 0 -0.01
+  shape [
+    200 200
+    200 0
+    50 0
+    50 50
+    -50 50
+    -50 -50
+    50 -50
+    50 0
+    200 0
+    200 -200
+    -200 -200
+    -200 200
+  ]
+  density 0.01
+  type "cherry tree"
+  randomSeed 1
+  maxHeight 12
+  minHeight 6
+  maxRadius 6
+  minRadius 3
+}
+Mavic2Pro {
+  hidden position_0_0 5.067835020877153e-10
+  hidden position_5_0 -1.468343907381082e-05
+  hidden rotation_6 0 -0.9999999999999999 0 1.4683444249437338e-05
+  hidden position_6_0 0.0005143688051864679
+  hidden rotation_7 1 0 0 0.0005143688054718357
+  translation 9.257653914200326 -57.818446170900295 1.209689636256195
+  rotation 0.01698830283223589 -0.03305430551070883 0.9993091666016504 -1.0838353071795863
+  controller "Scanning"
+  cameraSlot [
+    Camera {
+      width 400
+      height 240
+      near 0.2
+    }
+  ]
+}
+Cat {
+  translation 0 6.57 0
+  rotation 0 0 1 -2.094395307179586
+}
+Pedestrian {
+  translation 0 -5.23 1.27
+}
+Dog {
+  translation 6.46 3.18 0
+}
+ToyotaPrius {
+  hidden position_0_0 -3.853334718513665e-09
+  hidden position2_0_0 2.53974381016784e-06
+  hidden position_0_1 -3.873902619457669e-09
+  hidden position2_0_1 2.4930317453842217e-06
+  hidden position_0_2 -0.0005660406967633137
+  hidden position_0_3 -0.000564710359597422
+  hidden rotation_1 1.926665141726116e-09 -0.9999988490329138 0.0015172121959795275 2.539675507592097e-06
+  hidden rotation_2 -1.9369489712701406e-09 0.9999987927116794 0.0015538903384245655 2.4930849526364482e-06
+  hidden rotation_3 0 1 0 0.0005660406969210778
+  hidden rotation_4 0 -1 0 0.000564710359649041
+  translation 16.77068204957059 11.58210416041052 0.37406841395946105
+  rotation -0.0035260591212862014 -0.00607196834234911 -0.9999753487499192 1.047216507773253
+  name "vehicle(1)"
+}
+ComposedHouse {
+  translation 5.63783 13.315 0
+  rotation 0 0 1 -1.047195307179586
+}
+DogHouse {
+  translation 5.56 3.2 0
+}
+ControlledStreetLight {
+  translation -7.28 -7.4228e-06 0
+  rotation 0 0 1 -1.5707953071795862
+}
+ControlledStreetLight {
+  translation -17.07 -4.31001 0.1
+  rotation 0 0 1 1.5708
+  name "street light(1)"
+}
+ControlledStreetLight {
+  translation 4.73 -9.31 0.2
+  rotation 0 0 1 1.5708
+  name "street light(2)"
+}
+ControlledStreetLight {
+  translation 20.71 -10.62 0.1
+  rotation 0 0 1 1.5708
+  name "street light(3)"
+}
+ControlledStreetLight {
+  translation 12.13 -3.46999 0.2
+  rotation 0 0 1 -1.5707953071795862
+  name "street light(4)"
+}
+ControlledStreetLight {
+  translation 26.1 -3.21998 0.1
+  rotation 0 0 1 -1.5707953071795862
+  name "street light(5)"
+}
+ControlledStreetLight {
+  translation -25.08 5.31997 0.2
+  rotation 0 0 1 -1.8325953071795862
+  name "street light(6)"
+}
+Bench {
+  translation 0.2407 -11.0015 0
+  rotation 0 0 1 1.309
+}
+Bench {
+  translation 15.1221 -12.3061 0
+  rotation 0 0 1 1.5708
+  name "bench(1)"
+  metalColor 1 0.333333 0
+}
+Bench {
+  translation 28.982 -1.77029 0
+  rotation 0 0 1 -1.5707953071795862
+  name "bench(2)"
+  metalColor 0.33334 0.333343 1
+}
+Bench {
+  translation -12.79 3.15344 0
+  rotation 0 0 1 -1.8325953071795862
+  name "bench(3)"
+}
+HouseWithGarage {
+  translation 24.84 -27.72 0
+  rotation 0 0 1 1.5708
+}
+ToyotaPrius {
+  hidden position_0_0 -3.066674752124507e-08
+  hidden position2_0_0 0.0006231482474571855
+  hidden position_0_1 -3.025044073587652e-08
+  hidden position2_0_1 0.0006211627945298647
+  hidden position_0_2 0.052022533229192834
+  hidden position_0_3 0.05183918544550002
+  hidden rotation_1 1.533337374205474e-08 -0.9999999987890598 4.9212601683288116e-05 0.0006231482479910628
+  hidden rotation_2 -1.5125220350002317e-08 0.9999999988141696 4.869969675218468e-05 0.0006211627952940865
+  hidden rotation_3 0 -1 0 0.05202253322919598
+  hidden rotation_4 0 1 0 0.051839185445499536
+  translation 19.765727555618177 -19.825462594699406 0.3779605060337774
+  rotation 0.0025574350349716795 -0.002601436148085439 0.9999933460058669 1.570768055933787
+  color 0.333333 0.49 1
+  name "vehicle(2)"
+}
+RobotstadiumSoccerField {
+  translation -17 -40 0.2
+  postRadius 0.1
+}
+TexturedBoxShape {
+}
