@@ -1,38 +1,38 @@
 # 🛸 Autonomous Drone Red Object Tracking & Search - Webots
 
-Ce projet présente la simulation d'un drone quadricoptère autonome (DJI Mavic 2 Pro) sous **Webots**, capable de scanner un environnement, de détecter un véhicule/objet rouge via traitement d'image, et de s'y asservir en vol stationnaire.
+This project presents the simulation of an autonomous quadcopter drone (DJI Mavic 2 Pro) in **Webots**, capable of scanning an environment, detecting a red vehicle/object through image processing, and locking onto it in hover flight.
 
 ---
 
-## 📷 Aperçu de la simulation
+## 📷 Simulation Preview
 
-![Aperçu de la simulation](Images/apercu.png)
-
----
-
-## ⚙️ Architecture & Machine à États (FSM)
-
-Le contrôleur Python (`Scanning.py`) implémente une machine à états finis pour la recherche et l'approche :
-
-1. **`SCANNING` :** Le drone pivote sur son axe de lacet (`YAW`) pour balayer l'environnement.
-2. **`APPROACHING` :** Déclenché dès que l'objet rouge dépasse le seuil de détection (`ratio > 0.02`). Le drone s'oriente et avance vers la cible (`pitch = -1.0`).
-3. **`HOVERING` :** Déclenché lorsque le drone est à proximité de la cible (`ratio > 0.25`). Il se stabilise en vol stationnaire directement au-dessus de l'objet.
-
-> **Mode Manuel :** Une interruption via le clavier (flèches directionnelles + SHIFT) permet d'intervenir manuellement avant de repasser en contrôle automatique.
+![Simulation preview](Images/apercu.png)
 
 ---
 
-## 🛠️ Spécifications techniques
+## ⚙️ Architecture & Finite State Machine (FSM)
 
-- **Simulateur :** Webots (Drone DJI Mavic 2 Pro)
-- **Langage & Librairies :** Python, NumPy, API Webots (`controller`)
-- **Asservissement :** Correcteurs P pour le maintien d'altitude (GPS) et le contrôle d'attitude Roll/Pitch (IMU & Gyroscope)
-- **Traitement d'image :** Caméra RGB avec segmentation par masquage de couleur et calcul du centroïde `(cx, cy)`
+The Python controller (`Scanning.py`) implements a finite state machine for search and approach:
+
+1. **`SCANNING`:** The drone rotates around its yaw axis to scan the environment.
+2. **`APPROACHING`:** Triggered as soon as the red object exceeds the detection threshold (`ratio > 0.02`). The drone orients itself and moves toward the target (`pitch = -1.0`).
+3. **`HOVERING`:** Triggered when the drone is close to the target (`ratio > 0.25`). It stabilizes in hover flight directly above the object.
+
+> **Manual Mode:** A keyboard interrupt (arrow keys + SHIFT) allows manual intervention before switching back to automatic control.
 
 ---
 
-## 📂 Organisation du dépôt
+## 🛠️ Technical Specifications
 
-- **`/controllers/Scanning/`** : Code source du contrôleur Python (`Scanning.py`).
-- **`/worlds/`** : Scène de simulation Webots (`drone_red_object_search.wbt`).
-- **`/Images/`** : Captures d'écran et rendus de la simulation.
+- **Simulator:** Webots (DJI Mavic 2 Pro drone)
+- **Language & Libraries:** Python, NumPy, Webots API (`controller`)
+- **Control:** P controllers for altitude hold (GPS) and Roll/Pitch attitude control (IMU & Gyroscope)
+- **Image processing:** RGB camera with color-mask segmentation and centroid computation `(cx, cy)`
+
+---
+
+## 📂 Repository Organization
+
+- **`/controllers/Scanning/`**: Python controller source code (`Scanning.py`).
+- **`/worlds/`**: Webots simulation scene (`drone_red_object_search.wbt`).
+- **`/Images/`**: Screenshots and simulation renders.
